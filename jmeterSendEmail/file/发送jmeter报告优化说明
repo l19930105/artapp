@@ -1,0 +1,46 @@
+# encoding=utf-8
+发送jmeter报告优化记录   --刘斌宇
+
+01  20180522  实现发送测试报告需求
+----------------------------------------------------------------------
+将jmeter的简易自动化接口报告的存在项目路径下
+python获取最近的报告发送给项目的各个负责人
+----------------------------------------------------------------------
+
+02   20180527  将报告的内容打印到邮件避免需要下载附件才能读取报告结果
+-----------------------------------------------------------------------
+ f = open(latest_report, 'rb')
+   mail_content = f.read()
+   f.close()
+ # HTML邮件正文
+ msg = MIMEText(mail_content, 'html', 'utf-8')
+-----------------------------------------------------------------------
+
+03   20180530  引入BeautifulSoup库，解析测试报告，如果有问题则发送
+-----------------------------------------------------------------------
+   # 如果返回是Flase，那么就发邮件，else 通过
+    # 整个方法放在报告生成之后，邮件发送之前
+    def is_result_pass(self, report):
+        try:
+            with open(report, 'r', encoding='utf-8') as wb_data:
+                soup = BeautifulSoup(wb_data, "html.parser")  # 将要解析的文件传入
+                book_a = soup.findAll(attrs={"class": "details"})
+
+                for book in book_a:
+                    return book.string
+                # # print(soup)
+                # status = soup.find_all(id="total_row")
+                # status = str(status)
+                # print(status[59])  # 用例总计
+                # result1 = int(status[59])  # 失败总计数
+                # result2 = int(status[70])  # 错误总计数
+                # print(result2)
+                # if result1 > 0 or result2 > 0:
+                #     # print("报告中存在错误或者失败的用例")
+                #     return False
+                # else:
+                #     # print("报告用例均执行成功")
+                #     return True
+        except Exception as e:
+            print("测试报告文件解析有误！", str(e))
+

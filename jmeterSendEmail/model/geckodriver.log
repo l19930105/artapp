@@ -1,0 +1,20 @@
+1520765874619	geckodriver	INFO	geckodriver 0.19.1
+1520765874673	geckodriver	INFO	Listening on 127.0.0.1:11360
+1520765877636	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1.WIN\\AppData\\Local\\Temp\\rust_mozprofile.7AeEFfPnCUgI"
+1520765879956	Marionette	INFO	Enabled via --marionette
+[GFX1-]: Could not get a DXGI adapter[
+GFX1-]: Could not get a DXGI adapter
+Unable to read VR Path Registry from C:\Users\Administrator.WIN-2OQL8J56SDS\AppData\Local\openvr\openvrpaths.vrpath
+[Child 9704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[GFX1-]: Could not get a DXGI adapter
+1520765888914	Marionette	INFO	Listening on port 11369
+1520765889343	Marionette	WARN	TLS certificate errors will be ignored for this session
+1520765889416	Marionette	DEBUG	Register listener.js for window 4294967297
+1520765889448	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1520765891251	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1520765891252	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1520765891818	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.sogou.com/"
+1520765891954	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.sogou.com/"
+Unable to read VR Path Registry from C:\Users\Administrator.WIN-2OQL8J56SDS\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: resource:///modules/ContentMetaHandler.jsm, line 123: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIMessageSender.sendAsyncMessage]

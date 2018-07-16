@@ -1,0 +1,213 @@
+# encoding=utf-8
+接口自动化框架优化记录   --刘斌宇
+
+01  20180422  引入其他文件夹的py文件（导包技巧）
+----------------------------------------------------------------------
+import sys
+import os
+
+# 获取引入文件的文件夹
+sys.path.append(os.getcwd() + '\\commons')
+import email_class
+----------------------------------------------------------------------
+
+02  20180422 测试报告用时间戳的形式生成避免重复
+----------------------------------------------------------------------
+import time
+
+#获取当前时间 可确保测试报告文件不重名
+now = time.strftime("%Y-%m-%d %H_%M_%S")
+report_name = report_path + '/'+ now + 'testcase_report.xlsx'
+...
+# 邮件附件添加该测试报告
+attach = report_name
+-----------------------------------------------------------------------
+
+03   20180423  main.py主程序加上记录整个框架执行的测试时间
+-----------------------------------------------------------------------
+import time
+
+# 存入程序开始时间
+start = time.clock()
+...
+...
+# 存入结束时间
+end = time.clock()
+print("整个接口测试总共花费了 %.2f s" % (end - start))
+-----------------------------------------------------------------------
+
+04   20180423   读取文件优化为相对路径，以免项目移植后造成文件路径找不到
+-----------------------------------------------------------------------
+# log_path = r"E:\PycharmProjects\SeleniumTest\PythonWork\xiaoqiangSelenium\PortProject\log"
+# 存放日志的文件夹 优化为相对路径
+log_path = './log'
+-----------------------------------------------------------------------
+
+05   20180514   引入微信发消息模块itchat
+-----------------------------------------------------------------------
+main.py 文件
+import WeiXinSendMsg  # 导入微信发送消息模块
+import itchat
+
+# # 通过如下命令登陆，即使程序关闭，一定时间内重新开启也可以不用重新扫码。
+# itchat.auto_login(hotReload=True)
+# 发送微信的好友备注名
+name = "刘斌宇的"
+# 发送微信的内容
+content = "线上接口用例全部通过，不用担心啦！"
+# 调用发送微信消息的方法
+mail = WeiXinSendMsg.send_move(name, content)
+
+备注： 该微信模块需要扫码登录不是很实用！！！（弃用中---）
+
+-----------------------------------------------------------------------
+05   20180626   测试地址用配置文件读取
+-----------------------------------------------------------------------
+增加配置文件读取类 在PortCommons里的read_init.py
+interface_test中需要导入该类 并对接口对用例进行赋值-->接口前缀
+从而实现把这个前缀做成配置文件去取 就不用测试环境一个接口用例 线上环境一个接口用例
+-----------------------------------------------------------------------
+
+06   20180626   结果报告的测试结果获取只有有错误才会发邮件通知（免得一直骚扰别人）
+-----------------------------------------------------------------------
+email_class 中增加is_result_pass方法
+# 如果返回是Flase，那么就发邮件，else 通过
+# 整个方法放在报告生成之后，邮件发送之前
+def is_result_pass(self,test_path):
+   # 捕获Excel文件打开失败异常
+   try:
+      wb = openpyxl.load_workbook(test_path)
+   except Exception as e:
+      print("打开Excel文件失败！", str(e))
+
+   # 获取TestCase工作表名的对象
+   s = wb.get_sheet_by_name("V4.9.5")
+   # 定义一个空的数组
+   enList = []
+   '''
+   进行测试结果判断，开始是用for循环取值然后判断发邮件，发现怎么都逻辑不对一直返回的都是True
+    后来就新建一个空的数组，存入取出的所有测试结果，判断失败是否存在列表中
+   '''
+   # 遍历Excel内容
+   for i in range(2, s.max_row+1):
+   # 获取到“测试结果”的值
+   ensure = s.cell(row=i, column=11).value
+   # 添加到列表
+   enList.append(ensure)
+   # 判断是否发送邮件
+   if '失败' in enList:
+     # print("报告中存在错误或者失败的用例，需要发送邮件>>>")
+     return False
+   else:
+     # print("报告用例均执行成功")
+     return True
+
+main.py文件49行新增
+# 如果全部通过返回True无需发送邮件监控，如有不通过返回False需发送邮件
+if res:
+    print("用例全部通过无需发邮件，程序结束！")
+    log.info("线上接口用例全部通过，不用担心啦！")
+else:
+    print("接口调用有问题！！！！")
+    log.info("新的接口自动化报告来啦！！！邮件的附件有excel的测试报告")
+-----------------------------------------------------------------------
+
+07   20180702   将测试用例的执行用例数、测试时间、通过和失败用例数写进日志
+-----------------------------------------------------------------------
+main.py 89行中增加
+usetime = round((end - start),2)
+log.info("整个接口测试总共花费了 " + str(usetime) + " s")
+
+run_testcase.py 36行中增加
+# 获取执行的用例数，并写入日志
+amount = str(int(s.cell(s.max_row, column=1).value))
+self.log.info("一共运行了 " + amount + "个用例")
+
+
+email_class.py
+import sys
+import os
+# 获取相对路径
+sys.path.append(os.getcwd() + '\\PortCommons')
+import log_class
+import time
+
+email_class.py42行中增加
+# 日志记录系统当前时间
+now = time.strftime("%Y-%m-%d %H_%M_%S")
+log.info("本次接口自动化测试的时间为： " + now)
+
+log_file = "log.txt"
+log = log_class.Logger(log_file)
+failureNum = str(enList.count('失败'))
+self.log.info("这次失败用例个数为： " + failureNum)
+passNum = str(enList.count('成功'))
+self.log.info("这次成功用例个数为： " + passNum)
+-----------------------------------------------------------------------
+
+08   20180702   将测试用例的执行用例数、测试时间、通过和失败用例数写进日志
+-----------------------------------------------------------------------
+log_class.py 11行中增加
+# 我发现这个循环并不能把所有的handle删除，始终还保留了一个，所以我又加了一个循环
+hs = logger.handlers
+if hs:
+   for x in hs:
+   logger.removeHandler(x)
+if hs:
+   logger.removeHandler(logger.handlers[0])
+
+
+09   20180703  避免日志重复打印（handle的关键）
+-----------------------------------------------------------------------
+log_class.py 11行中增加
+# 我发现这个循环并不能把所有的handle删除，始终还保留了一个，所以我又加了一个循环
+hs = logger.handlers
+if hs:
+   for x in hs:
+   logger.removeHandler(x)
+if hs:
+   logger.removeHandler(logger.handlers[0])
+-----------------------------------------------------------------------
+
+10   20180703  封装操作json类 PortCommons包中的opera_json.py
+-----------------------------------------------------------------------
+    # 在config文件夹中有user.json文件
+	opjson = OperetionJson()
+	shop  = opjson.get_data('shop')
+
+11   20180703  封装操作excel类 PortCommons包中的opera_excel.py
+-----------------------------------------------------------------------
+    test_path = "../testcase/testcase_APP.xlsx"
+    object1 = OperateExcel(test_path, 'V4.9.5')
+    # object1 = OperateExcel()
+    max_column = object1.get_max_column()
+ -----------------------------------------------------------------------
+
+12   20180703  新建data文件夹，封装获取常量方法data_config.py
+-----------------------------------------------------------------------
+class global_var:
+	Id = '1'                 # id
+	request_name = '2'       # 接口名称
+	prefix_url = '3'         # 获取地址前缀
+	request_url = '4'        # 获取请求地址
+	request_way = '5'        # 获取请求方法
+ -----------------------------------------------------------------------
+
+ 13   20180703  新建data文件夹，封装获取接口数据get_data.py  (11-13的封装操作暂未使用，因为麻烦）
+-----------------------------------------------------------------------
+	def __init__(self):
+		# 存放的用例
+		# test_path = r'E:\PycharmProjects\SeleniumTest\PythonWork\ArtApp\ArtAppPortProject\testcase\testcase_APP.xlsx'
+		# 优化为获取testcase文件夹下的用例 - 相对路径
+		test_path = "../testcase/testcase_APP.xlsx"
+		# 表格用例名
+		sheet_name =  'V4.9.5'
+		self.opera_excel = opera_excel.OperateExcel(test_path, sheet_name)
+
+	# 获取caseID
+	def get_id(self,row):
+		col = int(data_config.get_id())
+		caseID = self.opera_excel.get_value(row,col)
+		return caseID
+ -----------------------------------------------------------------------
+

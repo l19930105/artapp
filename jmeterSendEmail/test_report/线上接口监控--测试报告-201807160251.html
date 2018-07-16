@@ -1,0 +1,1709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Load Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% Microsoft YaHei;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 70%;
+					word-wrap:break-word;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>Load Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2018/07/16 14:52</td><td align="right">Designed for use with <a href="http://jmeter.apache.org/">JMeter</a> and <a href="http://ant.apache.org">Ant</a>.</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th># Samples</th><th>Failures</th><th>Success Rate</th><th>Average Time</th><th>Min Time</th><th>Max Time</th>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center">73</td><td align="center">12</td><td align="center">83.56%</td><td align="center">206 ms</td><td align="center">33 ms</td><td align="center">1925 ms</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Pages</h2>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>URL</th><th># Samples</th><th>Failures</th><th>Success Rate</th><th>Average Time</th><th>Min Time</th><th>Max Time</th><th></th>
+</tr>
+<tr valign="top" class="">
+<td>版本更新提示-4.6.0</td><td align="center">2</td><td align="center">0</td><td align="right">100.00%</td><td align="right">604 ms</td><td align="right">601 ms</td><td align="right">608 ms</td><td align="center"><a href="javascript:change('page_details_1')"><img alt="expand/collapse" src="expand.png" id="page_details_1_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_1">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "版本更新提示-4.6.0"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-版本更新 2-1</td><td align="center">1</td><td align="right">608</td><td align="right">563</td><td align="center">true</td>
+</tr>
+<tr>
+<td>正式库-版本更新 1-1</td><td align="center">2</td><td align="right">601</td><td align="right">563</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>正式用户登陆-APP</td><td align="center">3</td><td align="center">0</td><td align="right">100.00%</td><td align="right">450 ms</td><td align="right">71 ms</td><td align="right">653 ms</td><td align="center"><a href="javascript:change('page_details_2')"><img alt="expand/collapse" src="expand.png" id="page_details_2_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_2">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "正式用户登陆-APP"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">627</td><td align="right">2594</td><td align="center">true</td>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">2</td><td align="right">71</td><td align="right">2594</td><td align="center">true</td>
+</tr>
+<tr>
+<td>工作室活动-APP-4.9.1 2-1</td><td align="center">3</td><td align="right">653</td><td align="right">2609</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>版本更新提示-4.7.0</td><td align="center">2</td><td align="center">0</td><td align="right">100.00%</td><td align="right">40 ms</td><td align="right">33 ms</td><td align="right">48 ms</td><td align="center"><a href="javascript:change('page_details_3')"><img alt="expand/collapse" src="expand.png" id="page_details_3_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_3">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "版本更新提示-4.7.0"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-版本更新 2-1</td><td align="center">1</td><td align="right">48</td><td align="right">469</td><td align="center">true</td>
+</tr>
+<tr>
+<td>正式库-版本更新 1-1</td><td align="center">2</td><td align="right">33</td><td align="right">469</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>版本更新提示-4.7.1</td><td align="center">2</td><td align="center">0</td><td align="right">100.00%</td><td align="right">42 ms</td><td align="right">42 ms</td><td align="right">43 ms</td><td align="center"><a href="javascript:change('page_details_4')"><img alt="expand/collapse" src="expand.png" id="page_details_4_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_4">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "版本更新提示-4.7.1"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-版本更新 2-1</td><td align="center">1</td><td align="right">43</td><td align="right">469</td><td align="center">true</td>
+</tr>
+<tr>
+<td>正式库-版本更新 1-1</td><td align="center">2</td><td align="right">42</td><td align="right">469</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>版本更新提示-4.8.0</td><td align="center">2</td><td align="center">0</td><td align="right">100.00%</td><td align="right">50 ms</td><td align="right">34 ms</td><td align="right">66 ms</td><td align="center"><a href="javascript:change('page_details_5')"><img alt="expand/collapse" src="expand.png" id="page_details_5_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_5">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "版本更新提示-4.8.0"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-版本更新 2-1</td><td align="center">1</td><td align="right">66</td><td align="right">451</td><td align="center">true</td>
+</tr>
+<tr>
+<td>正式库-版本更新 1-1</td><td align="center">2</td><td align="right">34</td><td align="right">451</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>工作室课程详情</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">122 ms</td><td align="right">122 ms</td><td align="right">122 ms</td><td align="center"><a href="javascript:change('page_details_6')"><img alt="expand/collapse" src="expand.png" id="page_details_6_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_6">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "工作室课程详情"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">122</td><td align="right">318</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#%E6%9F%A5%E8%AF%A2%E5%B7%A5%E4%BD%9C%E5%AE%A4%E8%AF%BE%E7%A8%8B%E5%88%97%E8%A1%A8">查询工作室课程列表</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">158 ms</td><td align="right">158 ms</td><td align="right">158 ms</td><td align="center"><a href="javascript:change('page_details_7')"><img alt="expand/collapse" src="expand.png" id="page_details_7_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_7">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询工作室课程列表"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">158</td><td align="right">303</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>工作室课程评论列表</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">107 ms</td><td align="right">107 ms</td><td align="right">107 ms</td><td align="center"><a href="javascript:change('page_details_8')"><img alt="expand/collapse" src="expand.png" id="page_details_8_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_8">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "工作室课程评论列表"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">107</td><td align="right">303</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>工作室课程点赞和取消点赞</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">45 ms</td><td align="right">45 ms</td><td align="right">45 ms</td><td align="center"><a href="javascript:change('page_details_9')"><img alt="expand/collapse" src="expand.png" id="page_details_9_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_9">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "工作室课程点赞和取消点赞"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">45</td><td align="right">303</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>已购列表（工作室课程）</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">67 ms</td><td align="right">67 ms</td><td align="right">67 ms</td><td align="center"><a href="javascript:change('page_details_10')"><img alt="expand/collapse" src="expand.png" id="page_details_10_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_10">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "已购列表（工作室课程）"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">67</td><td align="right">328</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>工作室课程分享</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">35 ms</td><td align="right">35 ms</td><td align="right">35 ms</td><td align="center"><a href="javascript:change('page_details_11')"><img alt="expand/collapse" src="expand.png" id="page_details_11_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_11">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "工作室课程分享"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">35</td><td align="right">303</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>根据类型查询我的影音</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">1869 ms</td><td align="right">1869 ms</td><td align="right">1869 ms</td><td align="center"><a href="javascript:change('page_details_12')"><img alt="expand/collapse" src="expand.png" id="page_details_12_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_12">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "根据类型查询我的影音"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">1869</td><td align="right">316</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>登录-机构</td><td align="center">4</td><td align="center">0</td><td align="right">100.00%</td><td align="right">705 ms</td><td align="right">409 ms</td><td align="right">826 ms</td><td align="center"><a href="javascript:change('page_details_13')"><img alt="expand/collapse" src="expand.png" id="page_details_13_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_13">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "登录-机构"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">409</td><td align="right">2143</td><td align="center">true</td>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">2</td><td align="right">793</td><td align="right">2143</td><td align="center">true</td>
+</tr>
+<tr>
+<td>公益包年套餐-机构 3-1</td><td align="center">3</td><td align="right">826</td><td align="right">2195</td><td align="center">true</td>
+</tr>
+<tr>
+<td>比赛-机构 1-1</td><td align="center">4</td><td align="right">793</td><td align="right">2093</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询机构工作室详情-机构</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">56 ms</td><td align="right">56 ms</td><td align="right">56 ms</td><td align="center"><a href="javascript:change('page_details_14')"><img alt="expand/collapse" src="expand.png" id="page_details_14_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_14">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询机构工作室详情-机构"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">56</td><td align="right">847</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>更换工作室头像-机构</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">69 ms</td><td align="right">69 ms</td><td align="right">69 ms</td><td align="center"><a href="javascript:change('page_details_15')"><img alt="expand/collapse" src="expand.png" id="page_details_15_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_15">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "更换工作室头像-机构"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">69</td><td align="right">300</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>更换工作室简介图片-机构</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">45 ms</td><td align="right">45 ms</td><td align="right">45 ms</td><td align="center"><a href="javascript:change('page_details_16')"><img alt="expand/collapse" src="expand.png" id="page_details_16_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_16">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "更换工作室简介图片-机构"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">45</td><td align="right">306</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>设置工作室费率-机构</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">45 ms</td><td align="right">45 ms</td><td align="right">45 ms</td><td align="center"><a href="javascript:change('page_details_17')"><img alt="expand/collapse" src="expand.png" id="page_details_17_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_17">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "设置工作室费率-机构"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">45</td><td align="right">303</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询工作室成员-机构</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">53 ms</td><td align="right">53 ms</td><td align="right">53 ms</td><td align="center"><a href="javascript:change('page_details_18')"><img alt="expand/collapse" src="expand.png" id="page_details_18_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_18">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询工作室成员-机构"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">53</td><td align="right">1304</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>修改工作室成员信息设置-机构</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">100 ms</td><td align="right">100 ms</td><td align="right">100 ms</td><td align="center"><a href="javascript:change('page_details_19')"><img alt="expand/collapse" src="expand.png" id="page_details_19_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_19">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "修改工作室成员信息设置-机构"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">100</td><td align="right">324</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询机构工作室专家点评列表-机构</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">79 ms</td><td align="right">79 ms</td><td align="right">79 ms</td><td align="center"><a href="javascript:change('page_details_20')"><img alt="expand/collapse" src="expand.png" id="page_details_20_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_20">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询机构工作室专家点评列表-机构"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">79</td><td align="right">343</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>根据订单id获取专家点评详情-机构</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">43 ms</td><td align="right">43 ms</td><td align="right">43 ms</td><td align="center"><a href="javascript:change('page_details_21')"><img alt="expand/collapse" src="expand.png" id="page_details_21_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_21">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "根据订单id获取专家点评详情-机构"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">43</td><td align="right">292</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询工作室课程-机构</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">84 ms</td><td align="right">84 ms</td><td align="right">84 ms</td><td align="center"><a href="javascript:change('page_details_22')"><img alt="expand/collapse" src="expand.png" id="page_details_22_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_22">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询工作室课程-机构"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">84</td><td align="right">12937</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>根据id查询课程详情-机构</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">46 ms</td><td align="right">46 ms</td><td align="right">46 ms</td><td align="center"><a href="javascript:change('page_details_23')"><img alt="expand/collapse" src="expand.png" id="page_details_23_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_23">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "根据id查询课程详情-机构"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">46</td><td align="right">690</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>添加工作室课程-机构（未完成）</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">45 ms</td><td align="right">45 ms</td><td align="right">45 ms</td><td align="center"><a href="javascript:change('page_details_24')"><img alt="expand/collapse" src="expand.png" id="page_details_24_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_24">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "添加工作室课程-机构（未完成）"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">45</td><td align="right">285</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>编辑工作室课程-机构（未完成）</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">45 ms</td><td align="right">45 ms</td><td align="right">45 ms</td><td align="center"><a href="javascript:change('page_details_25')"><img alt="expand/collapse" src="expand.png" id="page_details_25_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_25">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "编辑工作室课程-机构（未完成）"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">45</td><td align="right">298</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>工作室课程上架、下架、提交审核-机构（未完成）</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">48 ms</td><td align="right">48 ms</td><td align="right">48 ms</td><td align="center"><a href="javascript:change('page_details_26')"><img alt="expand/collapse" src="expand.png" id="page_details_26_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_26">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "工作室课程上架、下架、提交审核-机构（未完成）"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">48</td><td align="right">287</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>工作室课程删除-机构（未完成）</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">50 ms</td><td align="right">50 ms</td><td align="right">50 ms</td><td align="center"><a href="javascript:change('page_details_27')"><img alt="expand/collapse" src="expand.png" id="page_details_27_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_27">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "工作室课程删除-机构（未完成）"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-4.8.0 1-1</td><td align="center">1</td><td align="right">50</td><td align="right">287</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>工作室活动列表-APP</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">42 ms</td><td align="right">42 ms</td><td align="right">42 ms</td><td align="center"><a href="javascript:change('page_details_28')"><img alt="expand/collapse" src="expand.png" id="page_details_28_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_28">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "工作室活动列表-APP"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>工作室活动-APP-4.9.1 2-1</td><td align="center">1</td><td align="right">42</td><td align="right">321</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>版本更新提示-4.8.1</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">33 ms</td><td align="right">33 ms</td><td align="right">33 ms</td><td align="center"><a href="javascript:change('page_details_29')"><img alt="expand/collapse" src="expand.png" id="page_details_29_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_29">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "版本更新提示-4.8.1"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>正式库-版本更新 1-1</td><td align="center">1</td><td align="right">33</td><td align="right">294</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%B4%BB%E5%8A%A8%E8%AF%A6%E6%83%85-APP">工作室活动详情-APP</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">40 ms</td><td align="right">40 ms</td><td align="right">40 ms</td><td align="center"><a href="javascript:change('page_details_30')"><img alt="expand/collapse" src="expand.png" id="page_details_30_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_30">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "工作室活动详情-APP"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>工作室活动-APP-4.9.1 2-1</td><td align="center">1</td><td align="right">40</td><td align="right">305</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%B4%BB%E5%8A%A8%E5%88%86%E4%BA%AB-APP">工作室活动分享-APP</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">41 ms</td><td align="right">41 ms</td><td align="right">41 ms</td><td align="center"><a href="javascript:change('page_details_31')"><img alt="expand/collapse" src="expand.png" id="page_details_31_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_31">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "工作室活动分享-APP"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>工作室活动-APP-4.9.1 2-1</td><td align="center">1</td><td align="right">41</td><td align="right">305</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询工作室线下活动</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">46 ms</td><td align="right">46 ms</td><td align="right">46 ms</td><td align="center"><a href="javascript:change('page_details_32')"><img alt="expand/collapse" src="expand.png" id="page_details_32_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_32">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询工作室线下活动"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">46</td><td align="right">336</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#%E6%A0%B9%E6%8D%AEid%E6%9F%A5%E8%AF%A2%E5%B7%A5%E4%BD%9C%E5%AE%A4%E7%BA%BF%E4%B8%8B%E6%B4%BB%E5%8A%A8">根据id查询工作室线下活动</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">41 ms</td><td align="right">41 ms</td><td align="right">41 ms</td><td align="center"><a href="javascript:change('page_details_33')"><img alt="expand/collapse" src="expand.png" id="page_details_33_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_33">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "根据id查询工作室线下活动"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">41</td><td align="right">287</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#%E5%88%9B%E5%BB%BA%E7%BA%BF%E4%B8%8B%E6%B4%BB%E5%8A%A8">创建线下活动</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">43 ms</td><td align="right">43 ms</td><td align="right">43 ms</td><td align="center"><a href="javascript:change('page_details_34')"><img alt="expand/collapse" src="expand.png" id="page_details_34_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_34">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "创建线下活动"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">43</td><td align="right">309</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#%E7%BC%96%E8%BE%91%E5%B7%A5%E4%BD%9C%E5%AE%A4%E7%BA%BF%E4%B8%8B%E6%B4%BB%E5%8A%A8">编辑工作室线下活动</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">46 ms</td><td align="right">46 ms</td><td align="right">46 ms</td><td align="center"><a href="javascript:change('page_details_35')"><img alt="expand/collapse" src="expand.png" id="page_details_35_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_35">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "编辑工作室线下活动"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">46</td><td align="right">287</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#%E5%B7%A5%E4%BD%9C%E5%AE%A4%E7%BA%BF%E4%B8%8B%E6%B4%BB%E5%8A%A8%EF%BC%9A%E4%B8%8A%E7%BA%BF%E3%80%81%E4%B8%8B%E6%9E%B6%E3%80%81%E5%88%A0%E9%99%A4">工作室线下活动：上线、下架、删除</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">41 ms</td><td align="right">41 ms</td><td align="right">41 ms</td><td align="center"><a href="javascript:change('page_details_36')"><img alt="expand/collapse" src="expand.png" id="page_details_36_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_36">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "工作室线下活动：上线、下架、删除"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">41</td><td align="right">288</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询工作室支持的工作室及线下活动  支持我的工作室</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">56 ms</td><td align="right">56 ms</td><td align="right">56 ms</td><td align="center"><a href="javascript:change('page_details_37')"><img alt="expand/collapse" src="expand.png" id="page_details_37_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_37">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询工作室支持的工作室及线下活动  支持我的工作室"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">56</td><td align="right">1808</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询工作室不支持的工作室</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">109 ms</td><td align="right">109 ms</td><td align="right">109 ms</td><td align="center"><a href="javascript:change('page_details_38')"><img alt="expand/collapse" src="expand.png" id="page_details_38_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_38">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询工作室不支持的工作室"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">109</td><td align="right">6652</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%B4%BB%E5%8A%A8%E6%8A%A5%E5%90%8D%E6%94%AF%E4%BB%98-APP">工作室活动报名支付-APP</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">1288 ms</td><td align="right">1288 ms</td><td align="right">1288 ms</td><td align="center"><a href="javascript:change('page_details_39')"><img alt="expand/collapse" src="expand.png" id="page_details_39_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_39">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "工作室活动报名支付-APP"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>工作室活动-APP-4.9.1 2-1</td><td align="center">1</td><td align="right">1288</td><td align="right">305</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#%E6%94%AF%E6%8C%81/%E5%8F%96%E6%B6%88%E6%94%AF%E6%8C%81%E5%B7%A5%E4%BD%9C%E5%AE%A4">支持/取消支持工作室</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">1925 ms</td><td align="right">1925 ms</td><td align="right">1925 ms</td><td align="center"><a href="javascript:change('page_details_40')"><img alt="expand/collapse" src="expand.png" id="page_details_40_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_40">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "支持/取消支持工作室"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">1925</td><td align="right">281</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询一级类目菜单</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">222 ms</td><td align="right">222 ms</td><td align="right">222 ms</td><td align="center"><a href="javascript:change('page_details_41')"><img alt="expand/collapse" src="expand.png" id="page_details_41_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_41">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询一级类目菜单"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">222</td><td align="right">653</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>根据一级类目代码查询二级类目菜单</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">202 ms</td><td align="right">202 ms</td><td align="right">202 ms</td><td align="center"><a href="javascript:change('page_details_42')"><img alt="expand/collapse" src="expand.png" id="page_details_42_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_42">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "根据一级类目代码查询二级类目菜单"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">202</td><td align="right">7202</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询活动报名成员信息</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">170 ms</td><td align="right">170 ms</td><td align="right">170 ms</td><td align="center"><a href="javascript:change('page_details_43')"><img alt="expand/collapse" src="expand.png" id="page_details_43_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_43">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询活动报名成员信息"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">170</td><td align="right">2659</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#%E6%B7%BB%E5%8A%A0%E6%88%90%E5%91%98">添加成员</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">44 ms</td><td align="right">44 ms</td><td align="right">44 ms</td><td align="center"><a href="javascript:change('page_details_44')"><img alt="expand/collapse" src="expand.png" id="page_details_44_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_44">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "添加成员"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">44</td><td align="right">285</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#%E7%BC%96%E8%BE%91%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%88%90%E5%91%98">编辑工作室成员</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">51 ms</td><td align="right">51 ms</td><td align="right">51 ms</td><td align="center"><a href="javascript:change('page_details_45')"><img alt="expand/collapse" src="expand.png" id="page_details_45_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_45">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "编辑工作室成员"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">51</td><td align="right">285</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>报名成员删除</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">44 ms</td><td align="right">44 ms</td><td align="right">44 ms</td><td align="center"><a href="javascript:change('page_details_46')"><img alt="expand/collapse" src="expand.png" id="page_details_46_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_46">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "报名成员删除"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">44</td><td align="right">312</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>根据id获取报名成员信息</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">63 ms</td><td align="right">63 ms</td><td align="right">63 ms</td><td align="center"><a href="javascript:change('page_details_47')"><img alt="expand/collapse" src="expand.png" id="page_details_47_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_47">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "根据id获取报名成员信息"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">63</td><td align="right">663</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>根据活动发送报名成功短信</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">42 ms</td><td align="right">42 ms</td><td align="right">42 ms</td><td align="center"><a href="javascript:change('page_details_48')"><img alt="expand/collapse" src="expand.png" id="page_details_48_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_48">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "根据活动发送报名成功短信"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">42</td><td align="right">294</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询活动通知信息列表</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">106 ms</td><td align="right">106 ms</td><td align="right">106 ms</td><td align="center"><a href="javascript:change('page_details_49')"><img alt="expand/collapse" src="expand.png" id="page_details_49_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_49">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询活动通知信息列表"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">106</td><td align="right">687</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>添加活动通知信息</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">56 ms</td><td align="right">56 ms</td><td align="right">56 ms</td><td align="center"><a href="javascript:change('page_details_50')"><img alt="expand/collapse" src="expand.png" id="page_details_50_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_50">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "添加活动通知信息"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">56</td><td align="right">294</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>根据信息id给活动成员发送短信</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">56 ms</td><td align="right">56 ms</td><td align="right">56 ms</td><td align="center"><a href="javascript:change('page_details_51')"><img alt="expand/collapse" src="expand.png" id="page_details_51_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_51">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "根据信息id给活动成员发送短信"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>机构版-4.9.1 3-1</td><td align="center">1</td><td align="right">56</td><td align="right">285</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>用户登陆-APP-专家</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">657 ms</td><td align="right">657 ms</td><td align="right">657 ms</td><td align="center"><a href="javascript:change('page_details_52')"><img alt="expand/collapse" src="expand.png" id="page_details_52_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_52">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "用户登陆-APP-专家"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>工作室课程- APP接口测试 2-1</td><td align="center">1</td><td align="right">657</td><td align="right">2672</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询我的工作室信息</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">73 ms</td><td align="right">73 ms</td><td align="right">73 ms</td><td align="center"><a href="javascript:change('page_details_53')"><img alt="expand/collapse" src="expand.png" id="page_details_53_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_53">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询我的工作室信息"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>工作室课程- APP接口测试 2-1</td><td align="center">1</td><td align="right">73</td><td align="right">1640</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>新增工作室课程</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">48 ms</td><td align="right">48 ms</td><td align="right">48 ms</td><td align="center"><a href="javascript:change('page_details_54')"><img alt="expand/collapse" src="expand.png" id="page_details_54_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_54">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "新增工作室课程"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>工作室课程- APP接口测试 2-1</td><td align="center">1</td><td align="right">48</td><td align="right">300</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>修改工作室课程</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">52 ms</td><td align="right">52 ms</td><td align="right">52 ms</td><td align="center"><a href="javascript:change('page_details_55')"><img alt="expand/collapse" src="expand.png" id="page_details_55_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_55">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "修改工作室课程"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>工作室课程- APP接口测试 2-1</td><td align="center">1</td><td align="right">52</td><td align="right">303</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询机构赠送的工作室包年套餐</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">80 ms</td><td align="right">80 ms</td><td align="right">80 ms</td><td align="center"><a href="javascript:change('page_details_56')"><img alt="expand/collapse" src="expand.png" id="page_details_56_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_56">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询机构赠送的工作室包年套餐"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>公益包年套餐-机构 3-1</td><td align="center">1</td><td align="right">80</td><td align="right">1181</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询我的工作室课程列表</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">73 ms</td><td align="right">73 ms</td><td align="right">73 ms</td><td align="center"><a href="javascript:change('page_details_57')"><img alt="expand/collapse" src="expand.png" id="page_details_57_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_57">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询我的工作室课程列表"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>工作室课程- APP接口测试 2-1</td><td align="center">1</td><td align="right">73</td><td align="right">412</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>赠送的工作室包年套餐</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">55 ms</td><td align="right">55 ms</td><td align="right">55 ms</td><td align="center"><a href="javascript:change('page_details_58')"><img alt="expand/collapse" src="expand.png" id="page_details_58_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_58">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "赠送的工作室包年套餐"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>公益包年套餐-机构 3-1</td><td align="center">1</td><td align="right">55</td><td align="right">291</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询用户是否有赠送新的工作室套餐</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">49 ms</td><td align="right">49 ms</td><td align="right">49 ms</td><td align="center"><a href="javascript:change('page_details_59')"><img alt="expand/collapse" src="expand.png" id="page_details_59_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_59">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询用户是否有赠送新的工作室套餐"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>工作室课程- APP接口测试 2-1</td><td align="center">1</td><td align="right">49</td><td align="right">639</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>根据账号获取学生信息</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">52 ms</td><td align="right">52 ms</td><td align="right">52 ms</td><td align="center"><a href="javascript:change('page_details_60')"><img alt="expand/collapse" src="expand.png" id="page_details_60_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_60">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "根据账号获取学生信息"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>公益包年套餐-机构 3-1</td><td align="center">1</td><td align="right">52</td><td align="right">1624</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>查询工作室比赛</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">116 ms</td><td align="right">116 ms</td><td align="right">116 ms</td><td align="center"><a href="javascript:change('page_details_61')"><img alt="expand/collapse" src="expand.png" id="page_details_61_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_61">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "查询工作室比赛"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>比赛-机构 1-1</td><td align="center">1</td><td align="right">116</td><td align="right">31214</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>根据id查询工作室比赛详情</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">41 ms</td><td align="right">41 ms</td><td align="right">41 ms</td><td align="center"><a href="javascript:change('page_details_62')"><img alt="expand/collapse" src="expand.png" id="page_details_62_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_62">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "根据id查询工作室比赛详情"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>比赛-机构 1-1</td><td align="center">1</td><td align="right">41</td><td align="right">1467</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="">
+<td>创建比赛</td><td align="center">1</td><td align="center">0</td><td align="right">100.00%</td><td align="right">35 ms</td><td align="right">35 ms</td><td align="right">35 ms</td><td align="center"><a href="javascript:change('page_details_63')"><img alt="expand/collapse" src="expand.png" id="page_details_63_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_63">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "创建比赛"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>比赛-机构 1-1</td><td align="center">1</td><td align="right">35</td><td align="right">285</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#%E7%BC%96%E8%BE%91%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%AF%94%E8%B5%9B">编辑工作室比赛</a></td><td align="center">1</td><td align="center">1</td><td align="right">0.00%</td><td align="right">42 ms</td><td align="right">42 ms</td><td align="right">42 ms</td><td align="center"><a href="javascript:change('page_details_64')"><img alt="expand/collapse" src="expand.png" id="page_details_64_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_64">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "编辑工作室比赛"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td>比赛-机构 1-1</td><td align="center">1</td><td align="right">42</td><td align="right">306</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Failure Detail</h2>
+<h3>查询工作室课程列表<a name="%E6%9F%A5%E8%AF%A2%E5%B7%A5%E4%BD%9C%E5%AE%A4%E8%AF%BE%E7%A8%8B%E5%88%97%E8%A1%A8"></a>
+</h3>
+<table style="table-layout:fixed" width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Response</th><th>Failure Message</th>
+</tr>
+<tr>
+<tr>
+<td class="data key">Response Headers</td><td class="data">
+<pre class="data">HTTP/1.1 200 OK
+Date: Mon, 16 Jul 2018 06:51:59 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Response Data</td><td style="word-wrap:break-word" class="data">
+<pre class="data">{"success":false,"msg":"错误数据:studioCourseId为空","token":null,"target":null,"versionCode":null,"institutionId":null,"body":null}</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">HTTP Code</td><td class="data">
+<pre class="data">200 - OK</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Check Point</td><td class="data">
+<pre class="data">Test failed: text expected to contain /"msg":"查询工作室课程详情成功"/</pre>
+</td>
+</tr>
+</tr>
+</table>
+<h3>工作室活动详情-APP<a name="%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%B4%BB%E5%8A%A8%E8%AF%A6%E6%83%85-APP"></a>
+</h3>
+<table style="table-layout:fixed" width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Response</th><th>Failure Message</th>
+</tr>
+<tr>
+<tr>
+<td class="data key">Response Headers</td><td class="data">
+<pre class="data">HTTP/1.1 200 OK
+Date: Mon, 16 Jul 2018 06:52:05 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Response Data</td><td style="word-wrap:break-word" class="data">
+<pre class="data">{"success":false,"msg":"错误数据:studioActivityId为空","token":null,"target":null,"versionCode":null,"institutionId":null,"body":null}</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">HTTP Code</td><td class="data">
+<pre class="data">200 - OK</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Check Point</td><td class="data">
+<pre class="data">Test failed: text expected to contain /"msg":"查询工作室活动详情成功"/</pre>
+</td>
+</tr>
+</tr>
+</table>
+<h3>工作室活动分享-APP<a name="%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%B4%BB%E5%8A%A8%E5%88%86%E4%BA%AB-APP"></a>
+</h3>
+<table style="table-layout:fixed" width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Response</th><th>Failure Message</th>
+</tr>
+<tr>
+<tr>
+<td class="data key">Response Headers</td><td class="data">
+<pre class="data">HTTP/1.1 200 OK
+Date: Mon, 16 Jul 2018 06:52:06 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Response Data</td><td style="word-wrap:break-word" class="data">
+<pre class="data">{"success":false,"msg":"错误数据:studioActivityId为空","token":null,"target":null,"versionCode":null,"institutionId":null,"body":null}</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">HTTP Code</td><td class="data">
+<pre class="data">200 - OK</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Check Point</td><td class="data">
+<pre class="data">Test failed: text expected to contain /"msg":"查询分享工作室活动详情成功"/</pre>
+</td>
+</tr>
+</tr>
+</table>
+<h3>根据id查询工作室线下活动<a name="%E6%A0%B9%E6%8D%AEid%E6%9F%A5%E8%AF%A2%E5%B7%A5%E4%BD%9C%E5%AE%A4%E7%BA%BF%E4%B8%8B%E6%B4%BB%E5%8A%A8"></a>
+</h3>
+<table style="table-layout:fixed" width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Response</th><th>Failure Message</th>
+</tr>
+<tr>
+<tr>
+<td class="data key">Response Headers</td><td class="data">
+<pre class="data">HTTP/1.1 200 OK
+Date: Mon, 16 Jul 2018 06:52:06 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Response Data</td><td style="word-wrap:break-word" class="data">
+<pre class="data">{"success":false,"msg":"参数错误：id","token":null,"target":null,"versionCode":null,"institutionId":null,"body":null}</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">HTTP Code</td><td class="data">
+<pre class="data">200 - OK</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Check Point</td><td class="data">
+<pre class="data">Test failed: text expected to contain /"msg":"查询成功"/</pre>
+</td>
+</tr>
+</tr>
+</table>
+<h3>创建线下活动<a name="%E5%88%9B%E5%BB%BA%E7%BA%BF%E4%B8%8B%E6%B4%BB%E5%8A%A8"></a>
+</h3>
+<table style="table-layout:fixed" width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Response</th><th>Failure Message</th>
+</tr>
+<tr>
+<tr>
+<td class="data key">Response Headers</td><td class="data">
+<pre class="data">HTTP/1.1 200 OK
+Date: Mon, 16 Jul 2018 06:52:06 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Response Data</td><td style="word-wrap:break-word" class="data">
+<pre class="data">{"success":false,"msg":"参数错误，状态：请传入status","token":null,"target":null,"versionCode":null,"institutionId":null,"body":null}</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">HTTP Code</td><td class="data">
+<pre class="data">200 - OK</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Check Point</td><td class="data">
+<pre class="data">Test failed: text expected to contain /"msg":"请选择一级专业类目"/</pre>
+</td>
+</tr>
+</tr>
+</table>
+<h3>编辑工作室线下活动<a name="%E7%BC%96%E8%BE%91%E5%B7%A5%E4%BD%9C%E5%AE%A4%E7%BA%BF%E4%B8%8B%E6%B4%BB%E5%8A%A8"></a>
+</h3>
+<table style="table-layout:fixed" width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Response</th><th>Failure Message</th>
+</tr>
+<tr>
+<tr>
+<td class="data key">Response Headers</td><td class="data">
+<pre class="data">HTTP/1.1 200 OK
+Date: Mon, 16 Jul 2018 06:52:06 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Response Data</td><td style="word-wrap:break-word" class="data">
+<pre class="data">{"success":false,"msg":"参数错误：id","token":null,"target":null,"versionCode":null,"institutionId":null,"body":null}</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">HTTP Code</td><td class="data">
+<pre class="data">200 - OK</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Check Point</td><td class="data">
+<pre class="data">Test failed: text expected to contain /"msg":"该活动状态已发布，不允许编辑"/</pre>
+</td>
+</tr>
+</tr>
+</table>
+<h3>工作室线下活动：上线、下架、删除<a name="%E5%B7%A5%E4%BD%9C%E5%AE%A4%E7%BA%BF%E4%B8%8B%E6%B4%BB%E5%8A%A8%EF%BC%9A%E4%B8%8A%E7%BA%BF%E3%80%81%E4%B8%8B%E6%9E%B6%E3%80%81%E5%88%A0%E9%99%A4"></a>
+</h3>
+<table style="table-layout:fixed" width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Response</th><th>Failure Message</th>
+</tr>
+<tr>
+<tr>
+<td class="data key">Response Headers</td><td class="data">
+<pre class="data">HTTP/1.1 200 OK
+Date: Mon, 16 Jul 2018 06:52:06 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Response Data</td><td style="word-wrap:break-word" class="data">
+<pre class="data">{"success":false,"msg":"该活动已删除","token":null,"target":null,"versionCode":null,"institutionId":null,"body":null}</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">HTTP Code</td><td class="data">
+<pre class="data">200 - OK</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Check Point</td><td class="data">
+<pre class="data">Test failed: text expected to contain /"msg":"该活动已发布"/</pre>
+</td>
+</tr>
+</tr>
+</table>
+<h3>工作室活动报名支付-APP<a name="%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%B4%BB%E5%8A%A8%E6%8A%A5%E5%90%8D%E6%94%AF%E4%BB%98-APP"></a>
+</h3>
+<table style="table-layout:fixed" width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Response</th><th>Failure Message</th>
+</tr>
+<tr>
+<tr>
+<td class="data key">Response Headers</td><td class="data">
+<pre class="data">HTTP/1.1 200 OK
+Date: Mon, 16 Jul 2018 06:52:07 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Response Data</td><td style="word-wrap:break-word" class="data">
+<pre class="data">{"success":false,"msg":"错误数据:studioActivityId为空","token":null,"target":null,"versionCode":null,"institutionId":null,"body":null}</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">HTTP Code</td><td class="data">
+<pre class="data">200 - OK</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Check Point</td><td class="data">
+<pre class="data">Test failed: text expected to contain /"msg":"参数错误：payType为空"/</pre>
+</td>
+</tr>
+</tr>
+</table>
+<h3>支持/取消支持工作室<a name="%E6%94%AF%E6%8C%81/%E5%8F%96%E6%B6%88%E6%94%AF%E6%8C%81%E5%B7%A5%E4%BD%9C%E5%AE%A4"></a>
+</h3>
+<table style="table-layout:fixed" width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Response</th><th>Failure Message</th>
+</tr>
+<tr>
+<tr>
+<td class="data key">Response Headers</td><td class="data">
+<pre class="data">HTTP/1.1 200 OK
+Date: Mon, 16 Jul 2018 06:52:08 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Response Data</td><td style="word-wrap:break-word" class="data">
+<pre class="data">{"success":true,"msg":"操作成功","token":null,"target":null,"versionCode":null,"institutionId":null,"body":null}</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">HTTP Code</td><td class="data">
+<pre class="data">200 - OK</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Check Point</td><td class="data">
+<pre class="data">Test failed: text expected to contain /"msg":"已支持"/</pre>
+</td>
+</tr>
+</tr>
+</table>
+<h3>添加成员<a name="%E6%B7%BB%E5%8A%A0%E6%88%90%E5%91%98"></a>
+</h3>
+<table style="table-layout:fixed" width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Response</th><th>Failure Message</th>
+</tr>
+<tr>
+<tr>
+<td class="data key">Response Headers</td><td class="data">
+<pre class="data">HTTP/1.1 200 OK
+Date: Mon, 16 Jul 2018 06:52:08 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Response Data</td><td style="word-wrap:break-word" class="data">
+<pre class="data">{"success":false,"msg":"请输入性别","token":null,"target":null,"versionCode":null,"institutionId":null,"body":null}</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">HTTP Code</td><td class="data">
+<pre class="data">200 - OK</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Check Point</td><td class="data">
+<pre class="data">Test failed: text expected to contain /"msg":"报名录入的名额为0"/</pre>
+</td>
+</tr>
+</tr>
+</table>
+<h3>编辑工作室成员<a name="%E7%BC%96%E8%BE%91%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%88%90%E5%91%98"></a>
+</h3>
+<table style="table-layout:fixed" width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Response</th><th>Failure Message</th>
+</tr>
+<tr>
+<tr>
+<td class="data key">Response Headers</td><td class="data">
+<pre class="data">HTTP/1.1 200 OK
+Date: Mon, 16 Jul 2018 06:52:08 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Response Data</td><td style="word-wrap:break-word" class="data">
+<pre class="data">{"success":false,"msg":"请输入性别","token":null,"target":null,"versionCode":null,"institutionId":null,"body":null}</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">HTTP Code</td><td class="data">
+<pre class="data">200 - OK</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Check Point</td><td class="data">
+<pre class="data">Test failed: text expected to contain /"msg":"该成员不是此工作室录入，没有编辑该成员信息权限"/</pre>
+</td>
+</tr>
+</tr>
+</table>
+<h3>编辑工作室比赛<a name="%E7%BC%96%E8%BE%91%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%AF%94%E8%B5%9B"></a>
+</h3>
+<table style="table-layout:fixed" width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Response</th><th>Failure Message</th>
+</tr>
+<tr>
+<tr>
+<td class="data key">Response Headers</td><td class="data">
+<pre class="data">HTTP/1.1 200 OK
+Date: Mon, 16 Jul 2018 06:52:15 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Response Data</td><td style="word-wrap:break-word" class="data">
+<pre class="data">{"success":false,"msg":"该比赛已发布，不允许修改","token":null,"target":null,"versionCode":null,"institutionId":null,"body":null}</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">HTTP Code</td><td class="data">
+<pre class="data">200 - OK</pre>
+</td>
+</tr>
+<tr>
+<td class="data key">Check Point</td><td class="data">
+<pre class="data">Test failed: text expected to contain /"msg":"参数错误，状态：请传入status"/</pre>
+</td>
+</tr>
+</tr>
+</table>
+</body>
+</html>

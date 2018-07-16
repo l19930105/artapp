@@ -1,0 +1,5 @@
+本框架是为了测试ArtAPP接口而搭建
+
+接口列表：
+1 正式用户登陆    /ArtAppWeb4_0_0/rest/user/login
+2.大师课活动注册  /ArtAppComponents/rest/user/register
